@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 39,
             "patches": [
                 {
                     "date": 1693932202643,
@@ -32,6 +32,138 @@
                 {
                     "date": 1693932257538,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,26 +3,10 @@\n import logo from './logo.svg';\n import './App.css';\n \n class App extends Component {\n-  render\n-  return (\n-    <div className=\"App\">\n-      <header className=\"App-header\">\n-        <img src={logo} className=\"App-logo\" alt=\"logo\" />\n-        <p>\n-          Edit <code>src/App.js</code> and save to reload.\n-        </p>\n-        <a\n-          className=\"App-link\"\n-          href=\"https://reactjs.org\"\n-          target=\"_blank\"\n-          rel=\"noopener noreferrer\"\n-        >\n-          Learn React\n-        </a>\n-      </header>\n-    </div>\n-  );\n+  render() {\n+\n+  }\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1693932532380,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,26 @@\n import './App.css';\n \n class App extends Component {\n   render() {\n-\n+    return (\n+      <div className=\"App\">\n+        <header className=\"App-header\">\n+          <img src={logo} className=\"App-logo\" alt=\"logo\" />\n+          <p>\n+            \n+          </p>\n+          <a\n+            className=\"App-link\"\n+            href=\"https://reactjs.org\"\n+            target=\"_blank\"\n+            rel=\"noopener noreferrer\"\n+          >\n+            Learn React\n+          </a>\n+        </header>\n+      </div>\n+    );\n   }\n }\n \n export default App;\n"
+                },
+                {
+                    "date": 1693932539545,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             \n           </p>\n-          <a\n-            className=\"App-link\"\n-            href=\"https://reactjs.org\"\n-            target=\"_blank\"\n-            rel=\"noopener noreferrer\"\n-          >\n-            Learn React\n-          </a>\n+          \n         </header>\n       </div>\n     );\n   }\n"
+                },
+                {
+                    "date": 1693932547557,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            \n+            Hi React \n           </p>\n           \n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693932555410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,11 +9,13 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi React \n+            Hi React !!!\n           </p>\n-          \n+          <button>\n+            \n+          </button>\n         </header>\n       </div>\n     );\n   }\n"
+                },
+                {
+                    "date": 1693932575403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n import logo from './logo.svg';\n import './App.css';\n \n class App extends Component {\n+  \n   render() {\n     return (\n       <div className=\"App\">\n         <header className=\"App-header\">\n"
+                },
+                {
+                    "date": 1693932646879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import logo from './logo.svg';\n import './App.css';\n \n class App extends Component {\n-  \n+  con\n   render() {\n     return (\n       <div className=\"App\">\n         <header className=\"App-header\">\n@@ -13,9 +13,9 @@\n           <p>\n             Hi React !!!\n           </p>\n           <button>\n-            \n+            Change Name\n           </button>\n         </header>\n       </div>\n     );\n"
+                },
+                {
+                    "date": 1693932652933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,11 @@\n import logo from './logo.svg';\n import './App.css';\n \n class App extends Component {\n-  con\n+  constructor() {\n+    \n+  }\n   render() {\n     return (\n       <div className=\"App\">\n         <header className=\"App-header\">\n"
+                },
+                {
+                    "date": 1693932663923,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import './App.css';\n \n class App extends Component {\n   constructor() {\n-    \n+    super()\n   }\n   render() {\n     return (\n       <div className=\"App\">\n"
+                },
+                {
+                    "date": 1693932714444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,10 @@\n import './App.css';\n \n class App extends Component {\n   constructor() {\n-    super()\n+    super();\n+    this.\n   }\n   render() {\n     return (\n       <div className=\"App\">\n"
+                },
+                {
+                    "date": 1693932726498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,11 @@\n \n class App extends Component {\n   constructor() {\n     super();\n-    this.\n+    this.state = {\n+      \n+    }\n   }\n   render() {\n     return (\n       <div className=\"App\">\n"
+                },
+                {
+                    "date": 1693932739734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,10 @@\n \n class App extends Component {\n   constructor() {\n     super();\n-    this.state = {\n-      \n+    this.state = {    //always a json object\n+\n     }\n   }\n   render() {\n     return (\n"
+                },
+                {
+                    "date": 1693932750024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n class App extends Component {\n   constructor() {\n     super();\n     this.state = {    //always a json object\n-\n+      name\n     }\n   }\n   render() {\n     return (\n"
+                },
+                {
+                    "date": 1693932763281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,18 +6,18 @@\n class App extends Component {\n   constructor() {\n     super();\n     this.state = {    //always a json object\n-      name\n+      name: 'React'\n     }\n   }\n   render() {\n     return (\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi React !!!\n+            Hi state !!!\n           </p>\n           <button>\n             Change Name\n           </button>\n"
+                },
+                {
+                    "date": 1693932772813,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi state !!!\n+            Hi {state.name !!!\n           </p>\n           <button>\n             Change Name\n           </button>\n"
+                },
+                {
+                    "date": 1693932791938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi {state.name !!!\n+            Hi {this.state.name} !!!\n           </p>\n           <button>\n             Change Name\n           </button>\n"
+                },
+                {
+                    "date": 1693932929196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button>\n+          <button >\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693932935278,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button >\n+          <button ev>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693932947459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button ev>\n+          <button on>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693932962840,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button on>\n+          <button onClick={this.s}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693932984356,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={this.s}>\n+          <button onClick={()}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933220194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={()}>\n+          <button onClick={() => {O}}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933226030,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => {O}}>\n+          <button onClick={() => {Object.assign()}}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933233400,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => {Object.assign()}}>\n+          <button onClick={() => {Object.assign({name: \"\"})}}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933240490,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => {Object.assign({name: \"\"})}}>\n+          <button onClick={() => {Object.assign({name: 'Redux'})}}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933247528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => {Object.assign({name: 'Redux'})}}>\n+          <button onClick={() => {Object.assign({name: 'Redux'}, this.s)}}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933253641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => {Object.assign({name: 'Redux'}, this.s)}}>\n+          <button onClick={() => {Object.assign({name: 'Redux'}, this.state.name)}}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933279743,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => {Object.assign({name: 'Redux'}, this.state.name)}}>\n+          <button onClick={() => {}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933296232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => {}>\n+          <button onClick={() => }}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933301589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => }}>\n+          <button >\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933308956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button >\n+          <button onClick={()}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933326230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={()}>\n+          <button onClick={() => this.setState}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933332139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => this.setState}>\n+          <button onClick={() => this.setState({ name})}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1693933338354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => this.setState({ name})}>\n+          <button onClick={() => this.setState({ name: 'Redux'})}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
                 }
             ],
             "date": 1693932202643,
