@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 39,
+            "activePatchIndex": 59,
             "patches": [
                 {
                     "date": 1693932202643,
@@ -164,6 +164,86 @@
                 {
                     "date": 1693933338354,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} !!!\n           </p>\n-          <button onClick={() => this.setState({ name})}>\n+          <button onClick={() => this.setState({ name: 'Redux'})}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1694015788904,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n class App extends Component {\n   constructor() {\n     super();\n     this.state = {    //always a json object\n-      name: 'React'\n+      name: 'React',\n+      comapny: 'Facebook'\n     }\n   }\n   render() {\n     return (\n"
+                },
+                {
+                    "date": 1694015797001,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi {this.state.name} !!!\n+            Hi {this.state.name} and  !!!\n           </p>\n           <button onClick={() => this.setState({ name: 'Redux'})}>\n             Change Name\n           </button>\n"
+                },
+                {
+                    "date": 1694015805285,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,31 @@\n+import { Component } from 'react';\n+\n+import logo from './logo.svg';\n+import './App.css';\n+\n+class App extends Component {\n+  constructor() {\n+    super();\n+    this.state = {    //always a json object\n+      name: 'React',\n+      comapny: 'Facebook'\n+    }\n+  }\n+  render() {\n+    return (\n+      <div className=\"App\">\n+        <header className=\"App-header\">\n+          <img src={logo} className=\"App-logo\" alt=\"logo\" />\n+          <p>\n+            Hi {this.state.name} and I work at {this.state.} !!!\n+          </p>\n+          <button onClick={() => this.setState({ name: 'Redux'})}>\n+            Change Name\n+          </button>\n+        </header>\n+      </div>\n+    );\n+  }\n+}\n+\n+export default App;\n"
+                },
+                {
+                    "date": 1694015865773,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,11 +16,11 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi {this.state.name} and I work at {this.state.} !!!\n+            Hi {this.state.name} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={() => this.setState({ name: 'Redux'})}>\n+          <button onClick={() => this.setState({ name: 'Redux'});}>\n             Change Name\n           </button>\n         </header>\n       </div>\n@@ -28,35 +28,4 @@\n   }\n }\n \n export default App;\n-import { Component } from 'react';\n-\n-import logo from './logo.svg';\n-import './App.css';\n-\n-class App extends Component {\n-  constructor() {\n-    super();\n-    this.state = {    //always a json object\n-      name: 'React',\n-      comapny: 'Facebook'\n-    }\n-  }\n-  render() {\n-    return (\n-      <div className=\"App\">\n-        <header className=\"App-header\">\n-          <img src={logo} className=\"App-logo\" alt=\"logo\" />\n-          <p>\n-            Hi {this.state.name} and  !!!\n-          </p>\n-          <button onClick={() => this.setState({ name: 'Redux'})}>\n-            Change Name\n-          </button>\n-        </header>\n-      </div>\n-    );\n-  }\n-}\n-\n-export default App;\n"
+                },
+                {
+                    "date": 1694015873074,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,10 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={() => this.setState({ name: 'Redux'});}>\n+          <button onClick={() => this.setState({ name: 'Redux'});\n+        console.lo}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1694015878267,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <p>\n             Hi {this.state.name} and I work at {this.state.comapny} !!!\n           </p>\n           <button onClick={() => this.setState({ name: 'Redux'});\n-        console.lo}>\n+        console.log(this.state)}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1694015898124,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={() => this.setState({ name: 'Redux'});\n+          <button onClick={ () => this.setState({ name: 'Redux'});\n         console.log(this.state)}>\n             Change Name\n           </button>\n         </header>\n"
+                },
+                {
+                    "date": 1694015903464,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={ () => this.setState({ name: 'Redux'});\n+          <button onClick={ () => {} this.setState({ name: 'Redux'});\n         console.log(this.state)}>\n             Change Name\n           </button>\n         </header>\n"
+                },
+                {
+                    "date": 1694015911080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,10 +18,10 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.name} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={ () => {} this.setState({ name: 'Redux'});\n-        console.log(this.state)}>\n+          <button onClick={ () => { this.setState({ name: 'Redux'});\n+        console.log(this.state)} }>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1694016371134,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n class App extends Component {\n   constructor() {\n     super();\n     this.state = {    //always a json object\n-      name: 'React',\n+      firstname: 'React',\n       comapny: 'Facebook'\n     }\n   }\n   render() {\n@@ -19,9 +19,9 @@\n           <p>\n             Hi {this.state.name} and I work at {this.state.comapny} !!!\n           </p>\n           <button onClick={ () => { this.setState({ name: 'Redux'});\n-        console.log(this.state)} }>\n+        console.log(this.state)}}>\n             Change Name\n           </button>\n         </header>\n       </div>\n"
+                },
+                {
+                    "date": 1694016378646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,10 @@\n class App extends Component {\n   constructor() {\n     super();\n     this.state = {    //always a json object\n-      firstname: 'React',\n+      firstname: 'Robert',\n+      lastname\n       comapny: 'Facebook'\n     }\n   }\n   render() {\n"
+                },
+                {
+                    "date": 1694016387844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   constructor() {\n     super();\n     this.state = {    //always a json object\n       firstname: 'Robert',\n-      lastname\n+      lastname: 'Langdon',\n       comapny: 'Facebook'\n     }\n   }\n   render() {\n@@ -17,9 +17,9 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi {this.state.name} and I work at {this.state.comapny} !!!\n+            Hi {this.state.fiirtname} and I work at {this.state.comapny} !!!\n           </p>\n           <button onClick={ () => { this.setState({ name: 'Redux'});\n         console.log(this.state)}}>\n             Change Name\n"
+                },
+                {
+                    "date": 1694016393794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi {this.state.fiirtname} and I work at {this.state.comapny} !!!\n+            Hi {this.state.fiirtname} {this.state.fiirtname} and I work at {this.state.comapny} !!!\n           </p>\n           <button onClick={ () => { this.setState({ name: 'Redux'});\n         console.log(this.state)}}>\n             Change Name\n"
+                },
+                {
+                    "date": 1694016401962,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi {this.state.fiirtname} {this.state.fiirtname} and I work at {this.state.comapny} !!!\n+            Hi {this.state.firstname} {this.state.lasname} and I work at {this.state.comapny} !!!\n           </p>\n           <button onClick={ () => { this.setState({ name: 'Redux'});\n         console.log(this.state)}}>\n             Change Name\n"
+                },
+                {
+                    "date": 1694016437041,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,11 +17,11 @@\n       <div className=\"App\">\n         <header className=\"App-header\">\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n-            Hi {this.state.firstname} {this.state.lasname} and I work at {this.state.comapny} !!!\n+            Hi {this.state.firstname} {this.state.lastname} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={ () => { this.setState({ name: 'Redux'});\n+          <button onClick={ () => { this.setState({ firstname: 'Redux'});\n         console.log(this.state)}}>\n             Change Name\n           </button>\n         </header>\n"
+                },
+                {
+                    "date": 1694016449589,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.firstname} {this.state.lastname} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={ () => { this.setState({ firstname: 'Redux'});\n+          <button onClick={ () => { this.setState({ firstname: 'Dan', lastname: 'Brown'});\n         console.log(this.state)}}>\n             Change Name\n           </button>\n         </header>\n"
+                },
+                {
+                    "date": 1694017331056,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.firstname} {this.state.lastname} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={ () => { this.setState({ firstname: 'Dan', lastname: 'Brown'});\n+          <button onClick={ () => { this.setState({ firstname: 'Dan', lastname: 'Brown'}); //set\n         console.log(this.state)}}>\n             Change Name\n           </button>\n         </header>\n"
+                },
+                {
+                    "date": 1694017342722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.firstname} {this.state.lastname} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={ () => { this.setState({ firstname: 'Dan', lastname: 'Brown'}); //set\n+          <button onClick={ () => { this.setState({ firstname: 'Dan', lastname: 'Brown'}); //setState is an asynchronous call\n         console.log(this.state)}}>\n             Change Name\n           </button>\n         </header>\n"
+                },
+                {
+                    "date": 1694017349580,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.firstname} {this.state.lastname} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={ () => { this.setState({ firstname: 'Dan', lastname: 'Brown'}); //setState is an asynchronous call \n+          <button onClick={ () => { this.setState({ firstname: 'Dan', lastname: 'Brown'}); //setState is an asynchronous call a\n         console.log(this.state)}}>\n             Change Name\n           </button>\n         </header>\n"
+                },
+                {
+                    "date": 1694019177177,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n           <img src={logo} className=\"App-logo\" alt=\"logo\" />\n           <p>\n             Hi {this.state.firstname} {this.state.lastname} and I work at {this.state.comapny} !!!\n           </p>\n-          <button onClick={ () => { this.setState(() +>); //setState is an asynchronous call as console.log is synchrnous call and when its get called the state might not be updated as we saw in console on second click the state got updated in console so we will use function instead\n+          <button onClick={ () => { this.setState(() +); //setState is an asynchronous call as console.log is synchrnous call and when its get called the state might not be updated as we saw in console on second click the state got updated in console so we will use function instead\n         console.log(this.state)}}>\n             Change Name\n           </button>\n         </header>\n"
                 }
             ],
             "date": 1693932202643,
