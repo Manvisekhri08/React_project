@@ -4,10 +4,19 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+
+  /*
+  constructor runs first. inside it we intialise the state. 
+  render runs after constructor. render determine what to show, kind of like template of HTML.
+  componentDidMount runs next after render. React, run the constructor, intialised the state, now time to render the initial UI of this component. Mount intialie UI onto DOM. Once mounts, it will run.
+  **The moment state updates/changes, react knows its component is different. Now react re render. render() runs again. 
+  Once the state changes, we want to re render what component's UI is with any new values.
+  */
+
   constructor() {
     super();
     this.state = { 
-      monsters: [  ]    // So if our monster's array is empty, when we get the new list of array from our API, we want to update the state object and therefore we want to re render this component.
+      monsters: [  ]                                          // So if our monster's array is empty, when we get the new list of array from our API, we want to update the state object and therefore we want to re render this component.
      //always a json object
     };
   }
