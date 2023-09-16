@@ -19,8 +19,10 @@ class App extends Component {
       monsters: [  ]                                          // So if our monster's array is empty, when we get the new list of array from our API, we want to update the state object and therefore we want to re render this component.
      //always a json object
     };
+    console.log("constructor")
   }
-  componentDidMount() {                                      // Mounting is the first time a component gets placed onto the DOM, so the first time react renders a component onto the page that is mounting.
+  componentDidMount() {   
+    console.log("didMount")                                       // Mounting is the first time a component gets placed onto the DOM, so the first time react renders a component onto the page that is mounting.
     fetch('https://jsonplaceholder.typicode.com/users')      // It only happens once throughout a component's life. The only time when a component might remount is if it's been on mounted meaning it's been completely removed from the DOM.
         .then(response =>                                   // when we fetch the api its going to be a promise 
           response.json()                                    // converting the response to json cz that's what we want
@@ -34,11 +36,22 @@ class App extends Component {
             console.log(this.state)                        // a class component specifically that needs to leverage some kind of API call in order to get data that it needs in order to display the appropriate UI, you want to put that inside of your component did mount lifecycle method.
           }
           )
-          )                            
+          )                      
         }
   render() {
+    console.log("render");
     return (
       <div className="App">
+        <input className='search-box' type='search' placeholder='search monsters' onChange={(event) => {
+          console.log(event.target.value);
+          const searchString = event.target.value.toLowerCase();
+          const filteredMonster = this.state.monsters.filter((monster) => {
+            return monster.name.toLowerCase().includes(searchString)
+          });
+          this.setState(() => {
+            return {monsters : filteredMonster}
+          })
+        }}/>
         {
           this.state.monsters.map((monster) => {
             return <div key={monster.id}>
