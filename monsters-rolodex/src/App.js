@@ -3,6 +3,7 @@ import { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Cardlist from './components/card-list/card-list.component';
+import SearchBox from './components/search-box/search-box.component';
 
 class App extends Component {
 
@@ -31,7 +32,7 @@ class App extends Component {
           //console.log(users)                              // will get the users array from api
           this.setState(() => {
             return {monsters : users}                       //return back an object where monsters now points to users.
-          }
+          }                                                      //WHENEVER SETSTATE IS CALLED RENDER IS CALLED AGAIN
           // () => {                                           //  this is asynchronous, so we actually don't know when this data is going to come back. Once it comes back, we are going to now update the state.
           //   console.log(this.state)                        // a class component specifically that needs to leverage some kind of API call in order to get data that it needs in order to display the appropriate UI, you want to put that inside of your component did mount lifecycle method.
           // }
@@ -50,6 +51,8 @@ class App extends Component {
 
   render() {
 
+   // console.log('render from appjs')
+
     const {monsters, searchField} = this.state;                                   // for better readability 
     const {onSearchChange} = this;
 
@@ -59,15 +62,8 @@ class App extends Component {
 
     return (
       <div className="App">
-        <input className='search-box' type='search' placeholder='search monsters' onChange={onSearchChange}/>
-        {/* {
-          filteredMonster.map((monster) => {
-            return <div key={monster.id}>
-              <h1>{monster.name}</h1>
-              </div>
-          })
-          } */}
-          <Cardlist monsters = {filteredMonster} />
+        <SearchBox onChangeHandler = {onSearchChange} placeHolder = 'search monsters' className = 'searchBox'/>
+        <Cardlist monsters = {filteredMonster} />
       </div>
     );
   }
