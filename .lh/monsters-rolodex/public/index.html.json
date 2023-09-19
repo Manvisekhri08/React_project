@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 5,
             "patches": [
                 {
                     "date": 1693734719050,
@@ -24,6 +24,10 @@
                 {
                     "date": 1694019677357,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,8 @@\n   </head>\n   <body>\n     <noscript>You need to enable JavaScript to run this app.</noscript>\n     <div id=\"root\"></div>\n-    <h1>I'm drunk in the back of the car and crying like baby coming home from the bar</h1>\n     <!--\n       This HTML file is a template.\n       If you open it directly in the browser, you will see an empty page.\n \n"
+                },
+                {
+                    "date": 1695132859301,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,8 +14,10 @@\n       manifest.json provides metadata used when your web app is installed on a\n       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/\n     -->\n     <link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\" />\n+\n+    \n     <!--\n       Notice the use of %PUBLIC_URL% in the tags above.\n       It will be replaced with the URL of the `public` folder during the build.\n       Only files inside the `public` folder can be referenced from the HTML.\n"
                 }
             ],
             "date": 1693734719050,
