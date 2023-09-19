@@ -39,23 +39,29 @@ class App extends Component {
           )
           )                      
         }
+
+    onSearchChange = (event) => {
+        console.log({startingArray : this.state.monsters});
+        const searchField = event.target.value.toLowerCase();
+        
+        this.setState(() => {
+          return {searchField}
+        })
+      }
+
   render() {
     console.log("render");
 
-    const filteredMonster = this.state.monsters.filter((monster) => {
-      return monster.name.toLowerCase().includes(this.state.searchField)
+    const {monsters, searchField} = this.state;
+    const {onSearchChange} = this;
+
+    const filteredMonster = monsters.filter((monster) => {
+      return monster.name.toLowerCase().includes(searchField)
     });
 
     return (
       <div className="App">
-        <input className='search-box' type='search' placeholder='search monsters' onChange={(event) => {
-          console.log({startingArray : this.state.monsters});
-          const searchField = event.target.value.toLowerCase();
-          
-          this.setState(() => {
-            return {searchField}
-          })
-        }}/>
+        <input className='search-box' type='search' placeholder='search monsters' onChange={onSearchChange}/>
         {
           filteredMonster.map((monster) => {
             return <div key={monster.id}>
