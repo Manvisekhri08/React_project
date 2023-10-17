@@ -1,9 +1,15 @@
 import { Outlet, Link} from 'react-router-dom';
 import { Fragment, useContext } from 'react';
+
 import '../navigation/navigation.styles.scss';
+
 import { ReactComponent as SwanLogo } from '../../assets/crown.svg';
-import { UserContext } from '../../components/context/user.context';
 import { signOutUser } from '../../utils/firebase/firebase.utils';
+
+import { UserContext } from '../../components/context/user.context';
+
+import CartIcon from '../../components/cart-icon/cart-icon.component';
+import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
 
 const Navigation = () => {
   const{ currentUser } = useContext(UserContext);
@@ -27,7 +33,9 @@ const Navigation = () => {
               </Link>
               )
             }
+            <CartIcon />
           </div>
+          <CartDropdown />
         </div>
         <Outlet />
       </Fragment>
