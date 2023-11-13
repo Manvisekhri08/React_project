@@ -1,3 +1,6 @@
 
 .lh/monsters-rolodex/src/App.js.json
 *.json
+
+# Local Netlify folder
+.netlify
